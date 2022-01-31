@@ -48,9 +48,9 @@ export class JHAutoComplete extends LitElement {
   static get styles() {
     return css`
           :host {
-            --algo-autocomplete-container: {};
-            --algo-autocomplete-item: {};
-            --algo-autocomplete-highlight: {};
+            --jh-autocomplete-container: {};
+            --jh-autocomplete-item: {};
+            --jh-autocomplete-highlight: {};
           }
           ul {
             position: absolute;
@@ -61,15 +61,15 @@ export class JHAutoComplete extends LitElement {
             z-index: 10000;
             border: 1px solid grey;
             background: white;
-            @apply --algo-autocomplete-container;
+            @apply --jh-autocomplete-container;
           }
           li {
             padding: 4px;
-            @apply --algo-autocomplete-item;
+            @apply --jh-autocomplete-item;
           }
           li.active {
             background: whitesmoke;
-            @apply --algo-autocomplete-highlight;
+            @apply --jh-autocomplete-highlight;
           }
           [hidden] {
             display: none;
