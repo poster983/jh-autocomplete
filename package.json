@@ -2,8 +2,8 @@
     "name": "jh-autocomplete",
     "version": "1.0.0",
     "description": "An autocomplete webcomponent",
-    "main": "js-autocomplete.js",
-    "module": "js-autocomplete.js",
+    "main": "jh-autocomplete.js",
+    "module": "jh-autocomplete.js",
     "repository": {
       "type": "git",
       "url": "git+https://github.com/poster983/jh-autocomplete.git"
