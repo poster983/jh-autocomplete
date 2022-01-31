@@ -22,7 +22,7 @@ Custom property | Description | Default
  * @customElement
  * @demo demo/index.html
  */
-class JHAutoComplete extends LitElement {
+export class JHAutoComplete extends LitElement {
   static get properties() {
     return {
       items: {type: Array},
