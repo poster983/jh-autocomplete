@@ -154,7 +154,7 @@ export class JHAutoComplete extends LitElement {
       this._highlightedEl.classList.add('active')
     }
 
-    if(changed.has("keyValue") && this.keyValue != {}) {
+    if(changed.has("keyValue") && this.keyValue && this.keyValue != {}) {
         this.items = Object.keys(this.keyValue)
     }
   }
