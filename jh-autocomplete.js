@@ -126,9 +126,6 @@ export class JHAutoComplete extends LitElement {
 
   firstUpdated() {
     this._suggestionEl = this.shadowRoot.getElementById('suggestions')
-    this.updateComplete.then((done) => { // Fixes 0px issue with custom elements
-      this._suggestionEl.style.width = this.contentElement.getBoundingClientRect().width + 'px'
-    })
 
     this._bound.onKeyDown = this._handleKeyDown.bind(this)
     this._bound.onKeyUp = this._handleKeyUp.bind(this)
@@ -150,6 +147,11 @@ export class JHAutoComplete extends LitElement {
   }
 
   updated(changed) {
+
+    this.updateComplete.then((done) => { // Fixes 0px issue with custom elements
+      this._suggestionEl.style.width = this.contentElement.getBoundingClientRect().width + 'px'
+    })
+
     if (changed.has('opened') && this.opened && this._suggestionEl.childElementCount) {
       // Highlight the first when there are suggestions
       this._highlightedEl = this._suggestionEl.children[0]
