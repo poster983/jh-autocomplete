@@ -47,9 +47,6 @@ export class JHAutoComplete extends LitElement {
 
   static get styles() {
     return css`
-
-    static get styles() {
-        return css`
           :host {
             --algo-autocomplete-container: {};
             --algo-autocomplete-item: {};
