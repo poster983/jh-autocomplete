@@ -126,7 +126,9 @@ export class JHAutoComplete extends LitElement {
 
   firstUpdated() {
     this._suggestionEl = this.shadowRoot.getElementById('suggestions')
-    this._suggestionEl.style.width = this.contentElement.getBoundingClientRect().width + 'px'
+    this.updateComplete.then((done) => { // Fixes 0px issue with custom elements
+      this._suggestionEl.style.width = this.contentElement.getBoundingClientRect().width + 'px'
+    })
 
     this._bound.onKeyDown = this._handleKeyDown.bind(this)
     this._bound.onKeyUp = this._handleKeyUp.bind(this)
